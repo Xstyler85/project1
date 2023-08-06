@@ -1,1 +1,10 @@
 version: "3.9"
+
+services:
+  website:
+    build: ./website
+    restart: always
+    volumes:
+      - /root/website:/website
+    ports:
+      - "3000:3000"
